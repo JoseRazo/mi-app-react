@@ -1,0 +1,13 @@
+version: '3'
+services:
+  react-app:
+    image: react_app_web
+    container_name: react_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+      - ./:/node_modules
+    ports:
+      - "3000:3000"
